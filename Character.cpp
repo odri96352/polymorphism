@@ -15,3 +15,5 @@ void Character::Break(){
     this -> speed_ -= 1;
   }
 };
+
+~Character(){};

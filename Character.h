@@ -8,7 +8,7 @@ class Character{
     inline float max_speed() const{
       return max_speed_;
     };
-    // ~Character;
+    ~Character();
     void Accelerate();
     void Break();
   private:
