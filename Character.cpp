@@ -9,3 +9,9 @@ void Character::Accelerate(){
     this -> speed_ += 1;
   }
 };
+
+void Character::Break(){
+  if( this -> speed_ - 1 >= 0){
+    this -> speed_ -= 1;
+  }
+};

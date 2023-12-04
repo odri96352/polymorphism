@@ -10,7 +10,7 @@ class Character{
     };
     // ~Character;
     void Accelerate();
-    // void Break();
+    void Break();
   private:
     float speed_;
     float max_speed_;
