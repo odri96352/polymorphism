@@ -17,7 +17,7 @@ class Character{
     // At compile time, the compiler will search for ovverriders
     // of WhatAmI in derived classes.
 
-  private:
+  protected:
     float speed_;
     float max_speed_;
 };
