@@ -6,6 +6,10 @@ Yoshi::Yoshi(): Character(){
       *crests_= 0;
 };
 
+Yoshi::~Yoshi(){
+  delete crests_;
+};
+
 Yoshi::Yoshi(int crest_number){
   *crests_= crest_number ;
 };
