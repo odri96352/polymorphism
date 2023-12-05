@@ -10,6 +10,7 @@ void testing_what_am_i();
 void race_with_iterator_for_loop();
 void mario_kart();
 
+
 int main(){
   testing_constructors();
   std::cout<<std::endl;
@@ -25,12 +26,28 @@ int main(){
 }
 
 void testing_constructors(){
-  std::cout<<"Testing the default constructor"<<std::endl;
+  std::cout<<"Testing the default constructor of Mario"<<std::endl;
   Mario default_chara =Mario();
   std::cout<<"Speed:"<<std::endl;
   std::cout<<default_chara.speed()<<std::endl;
   std::cout<<"Max speed:"<<std::endl;
-  std::cout<<default_chara.max_speed();
+  std::cout<<default_chara.max_speed()<<std::endl;
+  std::cout<<"Testing the default constructor of Yoshi"<<std::endl;
+  Yoshi default_lizard =Yoshi();
+  std::cout<<"Speed:"<<std::endl;
+  std::cout<<default_lizard.speed()<<std::endl;
+  std::cout<<"Max speed:"<<std::endl;
+  std::cout<<default_lizard.max_speed()<<std::endl;
+  std::cout<<"Number of crests:"<<std::endl;
+  std::cout<<default_lizard.get_crests()<<std::endl;
+  std::cout<<"Testing the constructor of Yoshi"<<std::endl;
+  Yoshi lizard =Yoshi(7);
+  std::cout<<"Speed:"<<std::endl;
+  std::cout<<lizard.speed()<<std::endl;
+  std::cout<<"Max speed:"<<std::endl;
+  std::cout<<lizard.max_speed()<<std::endl;
+  std::cout<<"Number of crests:"<<std::endl;
+  std::cout<<lizard.get_crests()<<std::endl;
   std::cout<<std::endl;
 };
 

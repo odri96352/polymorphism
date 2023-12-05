@@ -3,8 +3,17 @@
 
 
 Yoshi::Yoshi(): Character(){
-
+      *crests_= 0;
 };
+
+Yoshi::Yoshi(int crest_number){
+  *crests_= crest_number ;
+};
+
+int Yoshi::get_crests(){
+  return *crests_;
+};
+
 
 std::string Yoshi::WhatAmI() const{
   std::string output = "Yoshi";
