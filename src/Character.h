@@ -10,7 +10,7 @@ class Character{
     inline float max_speed() const{
       return max_speed_;
     };
-    ~Character();
+    virtual ~Character();
     virtual void Accelerate();
     void Break();
     virtual std::string WhatAmI() const = 0;
