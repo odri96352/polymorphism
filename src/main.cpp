@@ -30,13 +30,21 @@ void testing_constructors(){
 };
 
 void testing_accelerate(){
-  std::cout<<"Testing the accelerate function"<<std::endl;
+  std::cout<<"Testing the accelerate function with Yoshi"<<std::endl;
   Yoshi test =Yoshi();
   std::cout<<"Speed before acceleration:"<<std::endl;
   std::cout<<test.speed()<<std::endl;
   test.Accelerate();
   std::cout<<"Speed after acceleration:"<<std::endl;
-  std::cout<<test.speed();
+  std::cout<<test.speed()<<std::endl;
+
+  std::cout<<"Testing the accelerate function with Mario"<<std::endl;
+  Mario fat_plumber =Mario();
+  std::cout<<"Speed before acceleration:"<<std::endl;
+  std::cout<<fat_plumber.speed()<<std::endl;
+  fat_plumber.Accelerate();
+  std::cout<<"Speed after acceleration:"<<std::endl;
+  std::cout<<fat_plumber.speed();
   std::cout<<std::endl;
 };
 

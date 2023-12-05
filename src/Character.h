@@ -11,7 +11,7 @@ class Character{
       return max_speed_;
     };
     ~Character();
-    void Accelerate();
+    virtual void Accelerate();
     void Break();
     virtual std::string WhatAmI() const = 0;
     // At compile time, the compiler will search for ovverriders
