@@ -1,11 +1,14 @@
 # include "Mario.h"
 # include "Yoshi.h"
 # include <iostream>
+# include <vector>
 
 void testing_constructors();
 void testing_accelerate();
 void testing_break();
 void testing_what_am_i();
+void race_with_iterator_for_loop();
+void mario_kart();
 
 int main(){
   testing_constructors();
@@ -15,6 +18,8 @@ int main(){
   testing_break();
   std::cout<<std::endl;
   testing_what_am_i();
+  std::cout<<std::endl;
+  mario_kart();
   std::cout<<std::endl;
   std::exit(EXIT_SUCCESS);
 }
@@ -73,4 +78,49 @@ void testing_what_am_i(){
   std::cout<<"What is the second character ?"<<std::endl;
   std::cout<<lizard.WhatAmI()<<std::endl;
   std::cout<<std::endl;
+};
+
+void mario_kart(){
+  int race_length = 100; // meters
+  int time_interval = 5; // seconds
+  int winner_position = 0; //meters
+  int winner_number = -1; //none yet
+
+  std::vector<Character*> runner;
+  runner.push_back(new Yoshi());
+  runner.push_back(new Mario());
+
+  std::vector<int> position; // on the starting block
+  position.push_back(0);
+  position.push_back(0);
+
+  std::cout << "1"<<std::endl;
+  std::cout << "2"<<std::endl;
+  std::cout << "3"<<std::endl;
+  std::cout << "Go !"<<std::endl;
+
+  while( winner_position < race_length ){
+    for (int i = 0; i<2; i++){
+      runner[i]->Accelerate();
+      position[i]+=runner[i]->speed()*time_interval;;
+      if (position[i]>winner_position){
+        winner_position=position[i];
+        winner_number = i;
+      }
+    }
+  std::cout << "At this stage of the race, ";
+  std::cout << runner[winner_number] -> WhatAmI();
+  std::cout << " is winning, at ";
+  std::cout << position[winner_number];
+  std::cout << " meters."<<std::endl;
+  }
+  std::cout << "The winner is:"<<std::endl;
+  std::cout << runner[winner_number] -> WhatAmI();
+  std::cout << "!"<<std::endl;
+
+  for (auto participant : runner){
+    delete participant;
+  }
+
+
 };
